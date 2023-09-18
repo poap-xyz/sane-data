@@ -1,6 +1,8 @@
 # NPM package template
 
-This template by default assumes you are building a module that should run in `node.js` but also the browser. It assumes you want to ship both raw and bundled & minified versions of your library.
+> Note: this repo is a work in progress
+
+This template by default assumes you are building a module that should run in `node.js` but also the browser. It assumes you want to ship both raw and bundled & minified versions of your library. If you disable `package.json` fields for specific platforms, the build process will skip building them
 
 This repository is configured by default with `eslint` and `husky` based on the preferences of the [POAP Skunkworks team](https://github.com/poap-xyz/skunk-linter/).
 
@@ -13,6 +15,7 @@ This repository also assumed you will be publishing new versions through Github 
     - granular access tokens _expire_, so make sure you keep that in account (hopefully npm optioanlly changes this soon)
 2. Add it as a Github Actions secret with the name `NPM_ACCESS_TOKEN`
 3. New versions are deployed when you push code with a new `version` in `package.json`
+    - It's recommended to use strict [Semver](https://semver.org/) for this
 4. Change the `package.json` fields: `name`, `description`, `author`, and `license` as you see fit
 5. Disable package fields that are not useful to your project
     - Browser module: remove `package.module` and `package.exports.node`
@@ -20,7 +23,11 @@ This repository also assumed you will be publishing new versions through Github 
 
 ## Setting up previews
 
-The preview templates are in `previews`. The local publishing of your package is done by running `npm run publish:local` which uses `yalc` under the hood. When setting up your package, make sure to:
+The preview templates are in `previews`. The default preview formats are a `react.js` app and a default `node.js` environment.
+
+The local publishing of your package is done by running `npm run publish:local` which uses `yalc` under the hood.
+
+When setting up your package, make sure to:
 
 1. Change the `package.name` field
 2. Change it in the `previews/{react,node}/package.json` `name` fields too

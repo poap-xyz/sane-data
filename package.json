@@ -1,0 +1,37 @@
+{
+  "name": "xplatform-npm-package",
+  "version": "0.0.1",
+  "description": "This is a template repository for the creation of new npm packages",
+  "main": "./src/index.js",
+  "browser": "./dist/browser/index.js",
+  "module": "./dist/legacy-node/index.js",
+  "exports": {
+    "node": {
+      "require": "./dist/node-cjs/index.js",
+      "import": "./dist/node-esm/index.js"
+    },
+    "development": "./src/index.js",
+    "default": "./dist/esm/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix src",
+    "publish:local": "yalc publish --push",
+    "build": "node esbuild.mjs"
+  },
+  "author": "Mentor <mentor@palokaj.co> (http://github.com/actuallymentor)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "@poap/skunk-linter": "^0.0.3",
+    "esbuild": "^0.19.3",
+    "eslint": "^8.49.0",
+    "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "dependencies": {
+    "xplatform-npm-package": "file:.yalc/xplatform-npm-package"
+  }
+}

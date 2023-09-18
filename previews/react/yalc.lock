@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "xplatform-npm-package": {
+      "signature": "37777486d6e9c7af6370d422f8ceee4f",
+      "file": true
+    }
+  }
+}

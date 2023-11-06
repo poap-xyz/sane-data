@@ -6,7 +6,7 @@ import * as esbuild from 'esbuild'
 
 // Set the LTS version to support
 // see https://github.com/nodejs/release#release-schedule
-const node_lts_version = 18
+const node_lts_version = 20
 const oldest_node_to_support = '6.10'
 
 // Set browser support

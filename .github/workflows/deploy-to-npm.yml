@@ -1,0 +1,40 @@
+name: Deploy to npm
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "package.json"
+      - ".github/workflows/deploy-to-npm.yml"
+
+jobs:
+  # Deploy npm module
+  deploy-npm-module:
+    name: Deploy changes to npm
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Environment and dependency setup
+      - name: Cloning repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js (.nvmrc)
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      # install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build module files
+        run: npm run build
+
+      - name: "Publish to NPM"
+        run: |
+          npm publish --access public
+        env:
+          NPM_ACCESS_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}

@@ -1,7 +1,8 @@
 {
-  "name": "xplatform-npm-package",
+  "name": "@poap/sane-data",
+  "private": false,
   "version": "0.0.1",
-  "description": "This is a template repository for the creation of new npm packages",
+  "description": "A collection of data validations and sanetisers",
   "main": "./src/index.js",
   "browser": "./dist/browser/index.js",
   "module": "./dist/legacy-node/index.js",
@@ -30,8 +31,5 @@
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3",
     "yalc": "^1.0.0-pre.53"
-  },
-  "dependencies": {
-    "xplatform-npm-package": "file:.yalc/xplatform-npm-package"
   }
 }

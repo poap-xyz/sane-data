@@ -46,4 +46,4 @@ If you want to deploy a new version without pushing code to Github, add your acc
 
 You might have other assumptions than I did when creating this template. Chief among them, consider:
 
-1. Whether the `.babelrc.js` settings make sense for your project
+1. Whether the `esbuild.mjs` settings make sense for your project

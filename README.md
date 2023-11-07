@@ -15,7 +15,7 @@ Example sanetiser usage:
 
 ```js
 // Import the sanetisers you need
-import { sanetise_eth_address, sanetise_ens_address, sanetise_eth_or_ens_address, sanetise_poap_id, sanetise_poap_edit_code, sanetise_email } from '@poap/sane-data'
+import { sanetise_eth_address, sanetise_ens_address, sanetise_eth_or_ens_address, sanetise_poap_id, sanetise_poap_edit_code, sanetise_email, sanetise_string } from '@poap/sane-data'
 
 // Use the sanetisers in your code
 function send_poap( wallet_or_ens, drop_id, email ){

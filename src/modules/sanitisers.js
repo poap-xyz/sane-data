@@ -114,3 +114,13 @@ export const sanetise_email = ( input, throw_on_fail = true ) => sanetize(
     email_regex,
     throw_on_fail
 )
+
+/* ///////////////////////////////
+// Generic sanitisations
+// /////////////////////////////*/
+/**
+ * 
+ * @param {String} input - Input string
+ * @returns {String} Lowercased and trimmed version of the input
+ */
+export const sanetise_string = input => `${ input }`.toLocaleLowerCase().trim()

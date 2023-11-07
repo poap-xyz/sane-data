@@ -123,4 +123,4 @@ export const sanetise_email = ( input, throw_on_fail = true ) => sanetize(
  * @param {String} input - Input string
  * @returns {String} Lowercased and trimmed version of the input
  */
-export const sanetise_string = input => `${ input }`.toLocaleLowerCase().trim()
+export const sanetise_string = input => `${ input }`.toLowerCase().trim()

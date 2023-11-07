@@ -1,7 +1,7 @@
 {
   "name": "@poap/sane-data",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A collection of data validations and sanetisers",
   "main": "./src/index.js",
   "browser": "./dist/browser/index.js",

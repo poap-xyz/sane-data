@@ -1,11 +1,11 @@
 {
   "name": "@poap/sane-data",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A collection of data validations and sanetisers",
   "main": "./src/index.js",
   "browser": "./dist/browser/index.js",
-  "module": "./dist/legacy-node/index.js",
+  "module": "./dist/node-esm/index.js",
   "exports": {
     "node": {
       "require": "./dist/node-cjs/index.js",

@@ -9,7 +9,7 @@ You can view the complete list of included elements and their documentation here
 
 ## Usage
 
-To use this package, install it by running `npm i -D @poap/sane-data` and using either the regexes or the sanetiser functions.
+To use this package, install it by running `npm i -S @poap/sane-data` and using either the regexes or the sanetiser functions.
 
 Example sanetiser usage:
 

@@ -7,7 +7,7 @@ export const eth_address_regex = /(0x[a-f0-9]{40})/i
 // Valid ENS regex, note that this may be any TLD or subdomain that supports DNSSEC
 // valid domain names are ASCII, case-insensitive, and may contain digits, hyphens, and dots, but may not start with a hyphen (ending was illegal but is ok since RFC 2181)
 // see https://en.wikipedia.org/wiki/Hostname#Syntax
-export const ens_regex = /^(?!-)(?:[a-zA-Z0-9-]{1,63}(?<!-)\.)+(?:[a-zA-Z]{2,})$/i
+export const ens_regex = /^(?!-)(?:[a-zA-Z0-9-]{1,63}\.)+(?:[a-zA-Z]{2,})$/i
 
 // Combined regex for Ethereum address or ENS name
 export const eth_or_ens_address_regex = new RegExp( `(${ eth_address_regex.source }|${ ens_regex.source })`, 'i' )
